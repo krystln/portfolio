@@ -5,14 +5,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Exo+2:wght@300;700&display=swap');
 
 :root {
-  --foreground-rgb: 0, 0, 0;
+  --foreground-rgb: 0, 0, 0; /*Black*/
   --background-rgb: 247, 245, 232;  /*Ivory*/
   font-family: Exo 2;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --foreground-rgb: 255, 255, 255;
+    --foreground-rgb: 247, 245, 232;
     --background-rgb: 0, 0, 0;
     font-family: Exo 2;
   }
@@ -27,4 +27,16 @@ body {
 /* Custom CSS */
 .Navbtn{
   @apply hover:underline-offset-4 hover:underline;
+}
+
+.slant{
+  height: 100vh;
+  color: rgb(var(--background-rgb));
+  background-color: rgb(var(--foreground-rgb));
+  clip-path: polygon(0 5%, 100% 0, 100% 96%, 0 100%);
+  @apply z-[2];
+}
+
+.formElement{
+  @apply bg-transparent border-2 border-gray-400 w-[40rem] my-1 p-1;
 }

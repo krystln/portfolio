@@ -3,7 +3,7 @@ import Link from 'next/link'
 
 const NavBar = () => {
   return (
-    <div className='flex w-full h-20 justify-center gap-x-28 text-xl font-semibold'>
+    <div className='flex w-full h-20 justify-center gap-x-28 text-xl font-semibold border-b '>
       <Link href="/projects">
         <button className='border h-full w-20 Navbtn'>
           <span className='h-fit border'>Projects</span>
