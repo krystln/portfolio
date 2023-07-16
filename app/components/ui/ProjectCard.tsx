@@ -11,7 +11,7 @@ type ProjectCardProps = {
 const ProjectCard = ({ image, title, link }: ProjectCardProps) => {
   return (
     <div className='border w-[20rem]  '>
-      <Link href={link}>
+      <Link href={link} target='_blank' rel='noopener noreferrer'>
         <Image src={image} alt={title} width={350} height={300} className='border'/>
         <h1>{title}</h1>
       </Link>

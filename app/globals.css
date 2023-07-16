@@ -2,25 +2,23 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url('https://fonts.googleapis.com/css2?family=Exo+2:wght@300;700&display=swap');
 
 :root {
   --foreground-rgb: 0, 0, 0; /*Black*/
-  --background-rgb: 247, 245, 232;  /*Ivory*/
-  font-family: Exo 2;
+  --background-rgb: 229, 229, 229;  /*Ivory*/
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --foreground-rgb: 247, 245, 232;
+    --foreground-rgb: 229, 229, 229;
     --background-rgb: 0, 0, 0;
-    font-family: Exo 2;
   }
 }
 
 body {
   color: rgb(var(--foreground-rgb));
   background: rgb(var(--background-rgb));
+  font-family: 'Exo 2', sans-serif;
 }
 
 
@@ -39,4 +37,19 @@ body {
 
 .formElement{
   @apply bg-transparent border-2 border-gray-400 w-[40rem] my-1 p-1;
+}
+
+.OptionsBtn:hover{
+  animation: Scale 0.1s forwards;
+}
+
+
+
+
+@keyframes Scale {
+  0% {
+  }
+  100% {
+    transform: scaleX(1.1) scaleY(1.1);
+  }
 }

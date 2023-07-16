@@ -1,28 +1,40 @@
-import React from 'react'
+'use client'
+
 import Link from 'next/link'
+import Image from 'next/image'
+import Mascot from '@public/mascot.svg'
 
 const NavBar = () => {
+
+  function handleFocus(event: React.MouseEvent<HTMLAnchorElement, MouseEvent>) {
+    event.preventDefault();
+    const id = event.currentTarget.getAttribute('href')!;
+    //alert(id?.valueOf());
+    document.getElementById(id)!.scrollIntoView({ behavior: 'smooth' });
+  }
+
+  
   return (
-    <div className='flex w-full h-20 justify-center gap-x-28 text-xl font-semibold border-b '>
-      <Link href="/projects">
-        <button className='border h-full w-20 Navbtn'>
-          <span className='h-fit border'>Projects</span>
-        </button>
-      </Link>
+    <nav className='flex flex-row justify-between py-10 px-[3rem] items-center'>
+      
+      <div>
+        <Image src={Mascot} alt="" width={75} height={75} className='' />
+      </div>
 
-      <Link href="/about">
-        <button className='border h-full w-20 Navbtn'>
-          <span>About</span>
-        </button>
-      </Link>
+      <div className='flex font-semibold text-[26px] gap-[4rem] '>
+          <Link href="AboutMe" className='h-full w-fit Navbtn' onClick={ handleFocus }>
+            About Me
+          </Link>
 
-      <Link href="/constact">
-        <button className='border h-full w-20 Navbtn'>
-          <span>Contacts</span>
-        </button>
-      </Link>
+          <Link href="Project" className=' h-full w-fit Navbtn' onClick={ handleFocus }>
+            Projects
+          </Link>
 
-    </div>
+          <Link href="ContactMe" className=' h-full w-fit Navbtn' onClick={ handleFocus }>
+            Contact Me
+          </Link>
+      </div>
+    </nav>
   )
 }
 

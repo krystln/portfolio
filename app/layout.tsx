@@ -16,6 +16,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+      <style>
+        @import url('https://fonts.googleapis.com/css2?family=Exo+2:wght@100;300;700;800&display=swap');
+      </style>
       <body >{children}</body>
     </html>
   )
