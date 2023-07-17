@@ -2,7 +2,7 @@ import NavBar from "@components/NavBar"
 import Hero from "@components/Hero"
 import AboutMe from "@components/AboutMe"
 import Projects from "@components/Projects"
-import Contact from "@/app/components/ContactMe"
+import ContactMe from "@/app/components/ContactMe"
 
 
 const Home = () => {
@@ -14,18 +14,17 @@ const Home = () => {
         <Hero />
       </section>
 
-      <section className="w-full h-[100vh]" id="AboutMe">
+      <section className="w-full h-fit" id="AboutMe">
         <AboutMe></AboutMe>
       </section>
 
-      <section className="w-full h-[100vh]" id="Project">
+      <section className="w-full h-fit" id="Project">
         <Projects></Projects>        
       </section>
 
 
-      <section className="w-fit h-[50vh]" id="ContactMe">
-        <h1 className="font-bold text-xl">Contact Me</h1>
-        <Contact />
+      <section className="w-fit h-fit" id="ContactMe">
+        <ContactMe />
       </section>
 
 

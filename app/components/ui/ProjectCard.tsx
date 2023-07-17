@@ -2,19 +2,35 @@ import React from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 
+import Demo from '@public/export.svg'
+import Code from '@public/options.svg'
+
 type ProjectCardProps = {
   image: string,
   title: string,
-  link: string
+  description: string,
+  demo: string,
+  code: string
 }
 
-const ProjectCard = ({ image, title, link }: ProjectCardProps) => {
+const ProjectCard = ({ image, title, demo, code, description }: ProjectCardProps) => {
   return (
-    <div className='border w-[20rem]  '>
-      <Link href={link} target='_blank' rel='noopener noreferrer'>
-        <Image src={image} alt={title} width={350} height={300} className='border'/>
-        <h1>{title}</h1>
-      </Link>
+    <div className='flex my-[2rem] mx-[5rem] gap-[5rem] items-center'>
+        <Image 
+          src={image} 
+          alt={title} 
+          width={500} 
+          height={300}
+          style={{border: '2px solid white', width: '500px', height: '300px'}} 
+        />
+        <div className=''>
+          <h1 className='text-[32px] font-regular m-2'>{title}</h1>
+          <p className='text-[22px] font-light m-2'>{description}</p>
+          <div className='flex gap-[3rem] my-4 mx-2'>
+            <Link href={demo} className='bg-white flex gap-4 py-2 px-4 rounded-md'><span className='text-black'>Live Demo</span><Image src={Demo} alt='' width={20} height={20}/></Link>
+            <Link href={code} className='bg-white flex gap-4 py-2 px-4 rounded-md'><span className='text-black'>Codebase</span><Image src={Code} alt='' width={20} height={20}/></Link>
+          </div>
+        </div>
     </div>
   )
 }
