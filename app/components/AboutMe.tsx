@@ -6,7 +6,7 @@ const AboutMe = () => {
     <div className="h-fit">
       <div className="flex w-fit">
         <h1 className="border-r-2 border-white text-[55px] font-[500] pr-[2rem] mx-[5rem] my-[1rem]">About Me</h1>
-        <p className="flex flex-col gap-[2rem] text-[24px] pr-[5rem] font-thin">
+        <div className="flex flex-col gap-[2rem] text-[24px] pr-[5rem] font-thin">
           <span>Welcome to my website!</span>
 
           <span>Thrilled to have you here. I am a fourth-year B.Tech student specializing in Information Technology, having a passion for <span className="font-medium">front-end web development</span>. While I may not have pursued any internships yet, my dedication and enthusiasm have allowed me to gain valuable knowledge and skills in this field.</span>
@@ -20,7 +20,7 @@ const AboutMe = () => {
           <span>Thank you for taking the time to explore my portfolio website. I am excited about the prospect of working with you and contributing to innovative projects. Please feel free to browse my projects, and don&apos;t hesitate to reach out.</span>
 
           <span>Let&apos;s create something amazing together!</span>
-        </p>
+        </div>
       </div>
       <div className="flex slant my-[4rem] py-[4rem]">
         <Skills />

@@ -25,7 +25,7 @@ const ProjectCard = ({ image, title, demo, code, description }: ProjectCardProps
         />
         <div className="">
           <h1 className="text-[32px] font-regular m-2">{title}</h1>
-          <p className="text-[22px] font-light m-2">{description}</p>
+          <div className="text-[22px] font-light m-2">{description}</div>
           <div className="flex gap-[3rem] my-4 mx-2">
             <Link href={demo} className="bg-white flex gap-4 py-2 px-4 rounded-md"><span className="text-black">Live Demo</span><Image src={Demo} alt="" width={20} height={20}/></Link>
             <Link href={code} className="bg-white flex gap-4 py-2 px-4 rounded-md"><span className="text-black">Codebase</span><Image src={Code} alt="" width={20} height={20}/></Link>
