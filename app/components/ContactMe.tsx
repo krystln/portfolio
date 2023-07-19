@@ -1,5 +1,5 @@
 "use client"
-import { useRef } from "react"
+import { LegacyRef, useRef } from "react"
 import emailjs from "@emailjs/browser"
 
 const Contact = () => {
@@ -8,7 +8,7 @@ const Contact = () => {
 
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
-    emailjs.sendForm('service_d6hnjig', 'template_olm8gj7', form.current as HTMLFormElement, 'NrBLYYazrNZFskqvD')
+    emailjs.sendForm('service_d6hnjig', 'template_olm8gj7', form.current as HTMLFormElement, process.env.EMAILJS_PUBLIC_KEY)
       .then((result) => {alert(result.text)}, (error) => {alert(error.text)});
   }
 
@@ -18,7 +18,7 @@ const Contact = () => {
           <h1 className="text-[55px]">Contact Me</h1>
           <a href="mailto:contact@akshitgoyal.dev">contact@akshitgoyal.dev</a>  
         </div>
-        <form ref={form} onSubmit={handleSubmit} className="flex flex-col gap-y-1">
+        <form ref={form as LegacyRef<HTMLFormElement>} onSubmit={handleSubmit} className="flex flex-col gap-y-1">
             <input type="text" name="contact_name" id="name" placeholder="Name" className="formElement"/>
             <input type="email" name="contact_mail" id="email" placeholder="Email" className="formElement"/>
             <textarea name="message" id="message" cols={30} rows={5} placeholder="Message" className="formElement"></textarea>
