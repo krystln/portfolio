@@ -5,7 +5,7 @@ const AboutMe = () => {
   return (
     <div className="h-fit">
       <div className="flex w-fit">
-        <h1 className="border-r-2 border-white text-[55px] font-[500] pr-[2rem] mx-[5rem] my-[1rem]">About Me</h1>
+        <h1 className="border-r-2 border-[#e5e5e5] text-[55px] font-[500] pr-[2rem] mx-[5rem] my-[1rem]">About Me</h1>
         <div className="flex flex-col gap-[2rem] text-[24px] pr-[5rem] font-thin">
           <span>Welcome to my website!</span>
 

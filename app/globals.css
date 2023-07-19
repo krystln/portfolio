@@ -39,7 +39,7 @@ body {
 }
 
 .formElement{
-  @apply bg-transparent border-2 border-gray-400 w-[40rem] my-1 p-1;
+  @apply bg-transparent border-2 border-[#e5e5e5] w-[40rem] my-1 p-1;
 }
 
 .OptionsBtn:hover{
