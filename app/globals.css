@@ -46,9 +46,6 @@ body {
   animation: Scale 0.1s forwards;
 }
 
-
-
-
 @keyframes Scale {
   0% {
   }
