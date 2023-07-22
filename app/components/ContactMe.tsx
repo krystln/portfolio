@@ -13,9 +13,9 @@ const Contact = () => {
   }
 
   return (
-    <div className="flex my-[10rem] gap-[2rem]">
-        <div className="border-r-2 border-[#e5e5e5] px-[2rem] mx-[2rem] flex flex-col gap-2">
-          <h1 className="text-[55px]">Contact Me</h1> 
+    <div className="flex my-[10rem] gap-[2rem] ContactMe">
+        <div className="border-r-2 border-[#e5e5e5] px-[2rem] mx-[2rem] flex flex-col gap-2 ContactTitle">
+          <h1 className="text-[55px]">Contact Me</h1>   
           <a href="mailto:contact@akshitgoyal.dev" className="pl-3">contact@akshitgoyal.dev</a>
           <a href="https://www.linkedin.com/in/akshit1025/" className="pl-3">linkedin.com/in/akshit1025</a>
           

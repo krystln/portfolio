@@ -1,0 +1,177 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@media (max-width : 1150px) {
+
+    .formElement{
+        @apply w-[30rem];
+    }
+
+    .ProjectImage{
+        @apply w-3/5 h-[200px];
+    }
+    
+    .ProjectData{
+        @apply w-4/5;
+    }
+
+    .ProjectData > *{
+        @apply w-full;
+    }
+
+    .Button > a{
+        @apply px-[0.3rem];
+    }
+
+}
+
+@media (max-width : 950px) {
+
+    #ContactMe{
+        @apply w-full;
+    }
+
+    form{
+        @apply w-full;
+    }
+
+    .formElement{
+        @apply w-4/5;
+    }
+
+    
+    .ProjectImage{
+        @apply w-4/5 h-[180px];
+    }
+}
+
+@media (max-width : 830px) {
+
+    .AboutMe{
+        @apply flex-col;
+    }
+    
+    .AboutMe > h1{
+        @apply text-[24px] border-r-0 border-b-2 w-4/5 px-0 pl-1;
+    }
+
+    
+    .AboutMe > div{
+        @apply px-[4rem];
+    }
+
+
+    .Skills{
+        @apply flex-col-reverse items-center gap-0 h-fit;
+    }
+
+    
+    .Skills > h1{
+        @apply text-[24px] border-l-0 border-b-2 w-4/5 pl-1;
+    }
+
+    .AllSkills{
+        @apply gap-4 h-fit mt-8; 
+    }
+
+
+    h1{
+        @apply text-[24px];
+    }
+
+    *{
+        @apply text-[12px];
+    }
+
+    .ContactTitle{
+        @apply border-r-0 border-b-2;
+    }
+
+    .ContactTitle > a{
+        @apply hidden;
+    }
+
+    .ContactTitle > h1{
+        @apply text-[24px];
+    }
+
+    form{
+        @apply w-4/5 mx-[auto];
+    }
+
+    form > hr{
+        @apply mr-[20vw];
+    }
+
+    .formElement{
+        @apply w-full;
+    }
+
+    .ContactMe{
+        @apply flex-col text-[12px] w-4/5 mx-[auto];
+    }
+
+    #ContactMe{
+        @apply w-full;
+    }
+
+
+
+    .ProjectCard{
+        @apply flex-col w-full mx-auto my-6 gap-2 ;
+    }
+
+    .ProjectData > div{
+        @apply text-[12px];;
+    }
+
+    .ProjectData > h1{
+        @apply text-[16px];
+    }
+
+    .Projects > h1{
+        @apply text-[24px] ml-8;
+    }
+
+    .ProjectImage{
+        @apply w-3/5 h-[220px];
+    }
+
+    .Button > a{
+        @apply px-[0.3rem];
+    }
+}
+
+@media (max-width : 500px){
+    .ProjectImage{
+        @apply w-full h-[180px];
+    }
+
+    .ProjectCard{
+        @apply items-start;
+    }
+
+    .ProjectData{
+        @apply w-[90%];
+    }
+
+    .ProjectData > *{
+        @apply w-full;
+    }
+
+    .Button{
+        @apply h-full;
+    }
+
+    .AllSkills{
+        @apply gap-4;
+    }
+
+    .SkillRow{
+        @apply gap-2;
+    }
+
+}

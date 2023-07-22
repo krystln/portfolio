@@ -1,6 +1,5 @@
 "use client"
 import React from "react"
-import Link from "next/link"
 import Image from "next/image"
 
 import HtmlLogo from "@public/skillsLogo/html.svg"
@@ -14,19 +13,19 @@ import MongoLogo from "@public/skillsLogo/mongodb.svg"
 
 const Skills = () => {
   return (
-    <div className="mx-[2rem] w-4/5 h-full flex flex-col gap-[4rem] justify-center">
-      <div className="flex gap-[4rem] items-center justify-center">
-        <Image src={HtmlLogo} alt="" width={120} height={120}/>
-        <Image src={CssLogo} alt="" width={120} height={120}/>
-        <Image src={JavascriptLogo} alt="" width={120} height={120}/>
+    <div className="mx-[2rem] w-4/5 h-full flex flex-col gap-[4rem] justify-center AllSkills">
+      <div className="flex gap-[4rem] items-center justify-center SkillRow">
+        <div className="relative w-[120px] h-[120px]"><Image src={HtmlLogo} alt="" layout="fill" objectFit="contain" /></div>
+        <div className="relative w-[120px] h-[120px]"><Image src={CssLogo} alt="" layout="fill" objectFit="contain" /></div>
+        <div className="relative w-[120px] h-[120px]"><Image src={JavascriptLogo} alt="" layout="fill" objectFit="contain" /></div>
       </div>
-      <div className="flex gap-[6rem] items-center justify-center">
-        <Image src={ReactLogo} alt="" width={120} height={120}/>
-        <Image src={NextLogo} alt="" width={200} height={200}/>
+      <div className="flex gap-[6rem] items-center justify-center SkillRow">
+        <div className="relative w-[120px] h-[120px]"><Image src={ReactLogo} alt="" layout="fill" objectFit="contain" /></div>
+        <div className="relative w-[150px] h-[150px]"><Image src={NextLogo} alt="" layout="fill" objectFit="contain" /></div>
       </div>
-      <div className="flex gap-[6rem] items-center justify-center">
-        <Image src={GitLogo} alt="" width={120} height={120}/>
-        <Image src={MongoLogo} alt="" width={300} height={300}/>
+      <div className="flex gap-[6rem] items-center justify-center SkillRow">
+        <div className="relative w-[100px] h-[100px]"><Image src={GitLogo} alt="" layout="fill" objectFit="contain" /></div>
+        <div className="relative w-[150px] h-[150px]"><Image src={MongoLogo} alt="" layout="fill" objectFit="contain" /></div>
       </div>
     </div>
   )
