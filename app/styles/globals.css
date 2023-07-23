@@ -46,6 +46,10 @@ body {
   animation: Scale 0.1s forwards;
 }
 
+.Mascot:hover{
+  animation: Scale 0.5s forwards;
+}
+
 @keyframes Scale {
   0% {
   }
