@@ -1,5 +1,5 @@
-import { MouseEventHandler } from "react";
 import "./styles/globals.css";
+import "./styles/components.css";
 import { Scroll } from "./components/Scroll";
 
 export const metadata = {
