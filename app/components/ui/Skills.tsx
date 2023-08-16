@@ -1,34 +1,62 @@
-"use client"
-import React from "react"
-import Image from "next/image"
+"use client";
+import { useState } from "react";
+import Image from "next/image";
 
-import HtmlLogo from "@public/skillsLogo/html.svg"
-import CssLogo from "@public/skillsLogo/css.svg"
-import JavascriptLogo from "@public/skillsLogo/js.svg"
-import ReactLogo from "@public/skillsLogo/react.svg"
-import NextLogo from "@public/skillsLogo/next.svg"
-import GitLogo from "@public/skillsLogo/git.svg"
-import MongoLogo from "@public/skillsLogo/mongodb.svg"
-
+import HtmlLogo from "@public/skillsLogo/html.svg";
+import CssLogo from "@public/skillsLogo/css.svg";
+import JavascriptLogo from "@public/skillsLogo/js.svg";
+import ReactLogo from "@public/skillsLogo/react.svg";
+import NextLogo from "@public/skillsLogo/next.svg";
+import GitLogo from "@public/skillsLogo/git.svg";
+import MongoLogo from "@public/skillsLogo/mongodb.svg";
+import CppLogo from "@public/skillsLogo/cpp.svg";
+import CLogo from "@public/skillsLogo/c.svg";
+import NodeLogo from "@public/skillsLogo/nodejs.svg";
 
 const Skills = () => {
-  return (
-    <div className="mx-[2rem] w-4/5 h-full flex flex-col gap-[4rem] justify-center AllSkills">
-      <div className="flex gap-[4rem] items-center justify-center SkillRow">
-        <div className="relative w-[120px] h-[120px]"><Image src={HtmlLogo} alt="" layout="fill" objectFit="contain" /></div>
-        <div className="relative w-[120px] h-[120px]"><Image src={CssLogo} alt="" layout="fill" objectFit="contain" /></div>
-        <div className="relative w-[120px] h-[120px]"><Image src={JavascriptLogo} alt="" layout="fill" objectFit="contain" /></div>
-      </div>
-      <div className="flex gap-[6rem] items-center justify-center SkillRow">
-        <div className="relative w-[120px] h-[120px]"><Image src={ReactLogo} alt="" layout="fill" objectFit="contain" /></div>
-        <div className="relative w-[150px] h-[150px]"><Image src={NextLogo} alt="" layout="fill" objectFit="contain" /></div>
-      </div>
-      <div className="flex gap-[6rem] items-center justify-center SkillRow">
-        <div className="relative w-[100px] h-[100px]"><Image src={GitLogo} alt="" layout="fill" objectFit="contain" /></div>
-        <div className="relative w-[150px] h-[150px]"><Image src={MongoLogo} alt="" layout="fill" objectFit="contain" /></div>
-      </div>
-    </div>
-  )
-}
+  const [tag, setTag] = useState<string>("Languages");
 
-export default Skills
+  function changeTag(tag: string) {
+    setTag(tag);
+  }
+
+  return (
+    <>
+      <div className="flex justify-around">
+        <button onClick={() => changeTag("Languages")}>Languages</button>
+        <button onClick={() => changeTag("Front-End")}>Front-End</button>
+        <button onClick={() => changeTag("Back-End")}>Back-End</button>
+      </div>
+      <div className="bg-[rgb(var(--foreground-rgb))] p-10 flex">
+        {tag === "Languages" && (
+          <>
+            <Image src={CLogo} alt="C logo" width={200} height={200} />
+            <Image src={CppLogo} alt="C++ logo" width={200} height={200} />
+            <Image
+              src={JavascriptLogo}
+              alt="javascript logo"
+              width={200}
+              height={200}
+            />
+          </>
+        )}
+        {tag === "Front-End" && (
+          <>
+            <Image src={HtmlLogo} alt="html logo" width={200} height={200} />
+            <Image src={CssLogo} alt="css logo" width={200} height={200} />
+            <Image src={ReactLogo} alt="react logo" width={200} height={200} />
+            <Image src={NextLogo} alt="next logo" width={200} height={200} />
+          </>
+        )}
+        {tag === "Back-End" && (
+          <>
+            <Image src={NodeLogo} alt="node logo" width={200} height={200} />
+            <Image src={MongoLogo} alt="mongo logo" width={200} height={200} />
+          </>
+        )}
+      </div>
+    </>
+  );
+};
+
+export default Skills;
