@@ -15,7 +15,7 @@ const Hero = () => {
         className="rounded-full"
       />
       <p className="font-[500] text-xl text-center">
-        👋 Welcome! I'm <span className="font-[600]">Akshit Goyal</span>, a
+        👋 Welcome! I&apos;m <span className="font-[600]">Akshit Goyal</span>, a
         full-stack web developer driven by a love for detail and a flair for
         creating captivating web experiences. From just wire frames to beautiful
         code, I transform ideas into digital enchantment.
