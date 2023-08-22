@@ -16,7 +16,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className="py-32 flex flex-col items-center justify-center">
+      <body>
         {children}
         <Scroll />
       </body>
