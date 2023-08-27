@@ -1,15 +1,57 @@
-import React from "react"
-import ProjectCard from "@components/ui/ProjectCard"
+import React from "react";
+import ProjectCard from "@components/ui/ProjectCard";
+
+type Project = {
+  title: string;
+  description: string;
+  url: string;
+  codeUrl: string;
+};
 
 const Projects = () => {
-  return (
-    <div className="m-[4rem] p-[auto] Projects">
-      <h1 className="text-[55px] font-regular">Projects</h1>
-      <ProjectCard image="/TaskList_React.png" title="TaskList" description="Keep track of all your tasks and assignments with the TaskList. Built with Reactjs" demo="https://krystln.github.io/tasklist-react/" code="https://github.com/krystln/tasklist-react" />
-      <ProjectCard image="/LooseScrews.png" title="LooseScrews" description="An E-commerce platform for all your hardware needs. Built with Next & Reactjs" demo="https://loose-screws.vercel.app/" code="https://github.com/krystln/loose-screws" />
-      <ProjectCard image="/Portfolio.png" title="Portfolio Website" description="My Portfolio website :) Built with Next & Reactjs" demo="https://akshitgoyal.dev/" code="https://github.com/krystln/portfolio" />
-    </div>
-  )
-}
+  const ProjectDetails: Project[] = [
+    {
+      title: "TaskList",
+      description:
+        "An E-commerce platform for all your hardware needs. Built with Next & Reactjs",
+      url: "https://krystln.github.io/tasklist-react/",
+      codeUrl: "https://github.com/krystln/tasklist-react",
+    },
+    {
+      title: "LooseScrews",
+      description:
+        "An E-commerce platform for all your hardware needs. Built with Next & Reactjs",
+      url: "https://loose-screws.vercel.app/",
+      codeUrl: "https://github.com/krystln/loose-screws",
+    },
+    {
+      title: "Portfolio",
+      description: "My Portfolio website :) Built with Next & Reactjs",
+      url: "https://akshitgoyal.dev/",
+      codeUrl: "https://github.com/krystln/portfolio",
+    },
+  ];
 
-export default Projects
+  const projectList = ProjectDetails.map((project) => {
+    return (
+      <ProjectCard
+        key={project.title}
+        title={project.title}
+        description={project.description}
+        url={project.url}
+        codeUrl={project.codeUrl}
+      />
+    );
+  });
+
+  return (
+    <>
+      <h1 className="text-4xl font-black">My Projects</h1>
+      <div className="m-[4rem] p-[auto] Projects flex items-center gap-1">
+        {projectList}
+      </div>
+    </>
+  );
+};
+
+export default Projects;
