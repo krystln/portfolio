@@ -1,5 +1,6 @@
 import React from "react";
 import ProjectCard from "@components/ui/ProjectCard";
+import Carosel from "@components/Carosel";
 
 type Project = {
   title: string;
@@ -48,7 +49,7 @@ const Projects = () => {
     <>
       <h1 className="text-4xl font-black">My Projects</h1>
       <div className="m-[4rem] p-[auto] Projects flex items-center gap-1">
-        {projectList}
+        <Carosel>{projectList}</Carosel>
       </div>
     </>
   );

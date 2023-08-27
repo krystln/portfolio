@@ -1,6 +1,5 @@
 import "./styles/globals.css";
 import "./styles/components.css";
-import { Scroll } from "./components/Scroll";
 
 export const metadata = {
   title: "👋 Welcome! To my website",
@@ -16,10 +15,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body>
-        {children}
-        <Scroll />
-      </body>
+      <body>{children}</body>
     </html>
   );
 }

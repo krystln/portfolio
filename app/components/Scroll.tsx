@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useContext, useEffect } from "react";
+import React, { useContext } from "react";
 import Image from "next/image";
 import BgCurve from "./ui/BgCurve";
 import { ThemeContext, ThemeSwitcherContext } from "@components/Theme";

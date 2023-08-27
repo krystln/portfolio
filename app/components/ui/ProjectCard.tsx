@@ -1,39 +1,60 @@
-import React from "react"
-import Image from "next/image"
-import Link from "next/link"
+"use client";
 
-import Demo from "@public/export.svg"
-import Code from "@public/options.svg"
+import Image from "next/image";
+import Link from "next/link";
+import { useContext, useEffect } from "react";
+import { ThemeContext } from "@components/Theme";
 
-type ProjectCardProps = {
-  image: string,
-  title: string,
-  description: string,
-  demo: string,
-  code: string
-}
+type PCprop = {
+  title: string;
+  description: string;
+  url: string;
+  codeUrl: string;
+};
 
-const ProjectCard = ({ image, title, demo, code, description }: ProjectCardProps) => {
+const ProjectCard = ({ title, description, url, codeUrl }: PCprop) => {
+  const { isDarkTheme } = useContext(ThemeContext);
+  const link = isDarkTheme ? "./icons/dark/link.svg" : "./icons/light/link.svg";
+  const github = isDarkTheme
+    ? "./icons/dark/github.svg"
+    : "./icons/light/github.svg";
+
   return (
-    <div className="flex my-[2rem] mx-[5rem] gap-[5rem] items-center ProjectCard">
-      <div className="ProjectImage w-2/5 h-[225px] border-2 border-[#e5e5e5] relative">
-        <Image
-          src={image}
-          alt={title}
-          layout="fill"
-          objectFit="contain"
-        />
-      </div>
-      <div className="ProjectData w-3/5">
-        <h1 className="text-[32px] font-regular m-2">{title}</h1>
-        <div className="text-[22px] font-light m-2">{description}</div>
-        <div className="flex gap-[3rem] my-4 mx-2 items-center Button">
-          <Link href={demo} className="bg-[#e5e5e5] flex gap-4 py-2 px-4 rounded-md"><span className="text-black">Live Demo</span><Image src={Demo} alt="" width={20} height={20} /></Link>
-          <Link href={code} className="bg-[#e5e5e5] flex gap-4 py-2 px-4 rounded-md"><span className="text-black">Codebase</span><Image src={Code} alt="" width={20} height={20} /></Link>
-        </div>
-      </div>
-    </div>
-  )
-}
+    <div className="flex flex-col w-[480px] gap-2 items-center">
+      <Image
+        src={`/projectImg/${title}.png`}
+        alt=""
+        width={420}
+        height={240}
+        className="border border-white z-0"
+      />
 
-export default ProjectCard
+      <h2 className="flex justify-between text-2xl w-full px-5 font-bold">
+        {title}
+        <div className="flex gap-2">
+          <Link href={url}>
+            <Image
+              src={link}
+              alt="🔗"
+              width={30}
+              height={30}
+              className="bg-white"
+            />
+          </Link>
+          <Link href={codeUrl}>
+            <Image
+              src={github}
+              alt="👩‍💻"
+              width={30}
+              height={30}
+              className="bg-white"
+            />
+          </Link>
+        </div>
+      </h2>
+      <p className="text-center text-lg font-thin">{description}</p>
+    </div>
+  );
+};
+
+export default ProjectCard;
