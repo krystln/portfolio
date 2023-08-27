@@ -1,14 +1,16 @@
 "use client";
 
-import { createContext, useState } from "react";
+import { createContext, useEffect, useState } from "react";
 
 export const ThemeContext = createContext();
 export const ThemeSwitcherContext = createContext();
 
 const Theme = ({ children }) => {
-  const [isDarkTheme, setIsDarkTheme] = useState(
-    window.matchMedia("(prefers-color-scheme: dark)").matches
-  );
+  const [isDarkTheme, setIsDarkTheme] = useState(false);
+
+  useEffect(() => {
+    setIsDarkTheme(window.matchMedia("(prefers-color-scheme: dark)").matches);
+  }, []);
 
   const switchTheme = () => {
     setIsDarkTheme((prevTheme) => !prevTheme);
