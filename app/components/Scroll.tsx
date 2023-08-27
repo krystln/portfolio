@@ -1,9 +1,11 @@
 "use client";
 
-import React from "react";
+import React, { useContext, useEffect } from "react";
+import Image from "next/image";
 import BgCurve from "./ui/BgCurve";
+import { ThemeContext, ThemeSwitcherContext } from "@components/Theme";
 
-export const Scroll = () => {
+const Scroll = () => {
   function scrollUp() {
     window.scrollBy({ top: -window.innerHeight, behavior: "smooth" });
   }
@@ -12,16 +14,33 @@ export const Scroll = () => {
     window.scrollBy({ top: window.innerHeight, behavior: "smooth" });
   }
 
+  const switchTheme = useContext(ThemeSwitcherContext);
+  const isDarkTheme = useContext(ThemeContext);
+
+  const theme = isDarkTheme
+    ? "./icons/light/theme.svg"
+    : "./icons/dark/theme.svg";
+
   return (
     <>
-      <div className="fixed right-10 top-0 flex flex-col justify-between h-full py-10">
+      <div className="fixed right-10 top-0 flex flex-col justify-between h-full py-10 text-white">
         <button
-          className="text-4xl px-10 pb-4 rounded-full bg-stone-950 w-24 h-24"
+          className="text-4xl px-10 pb-4 rounded-full bg-stone-800 w-24 h-24"
           onClick={scrollUp}>
           &uarr;
         </button>
         <button
-          className="text-4xl px-10 pb-4 rounded-full bg-stone-950 w-24 h-24"
+          className="text-4xl rounded-full bg-stone-800 w-24 h-24 flex items-center justify-center"
+          onClick={switchTheme}>
+          <Image
+            src={theme}
+            alt={isDarkTheme ? "🌞" : "🌑"}
+            width={30}
+            height={30}
+          />
+        </button>
+        <button
+          className="text-4xl px-10 pb-4 rounded-full bg-stone-800 w-24 h-24"
           onClick={scrollDown}>
           &darr;
         </button>
@@ -32,3 +51,5 @@ export const Scroll = () => {
     </>
   );
 };
+
+export default Scroll;
