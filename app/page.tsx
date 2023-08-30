@@ -8,7 +8,7 @@ import Scroll from "./components/Scroll";
 const Home = () => {
   return (
     <Theme>
-      <main className="flex flex-col gap-32 pt-32 items-center">
+      <main className="flex flex-col gap-32 items-center">
         <Hero />
         <AboutMe />
         <Projects />

@@ -12,6 +12,23 @@ module.exports = {
         'gradient-conic':
           'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
       },
+      keyframes: {
+        flicker: {
+          '0% 100%': {
+            opacity: 1,
+          },
+          '50%': {
+            opacity: 0,
+          }
+        }
+      },
+      animation: {
+        flicker: 'flicker 0.75s ease-in infinite',
+      },
+      fontFamily: {
+        sans: ['Exo\\ 2', 'sans-serif'],
+        mono: ['Space\\ Mono', 'monospace'],
+      },
     },
   },
   plugins: [],
