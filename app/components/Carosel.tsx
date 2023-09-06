@@ -18,10 +18,20 @@ const Carosel = ({ children }: Props) => {
   }
 
   return (
-    <div className="flex overflow-hidden items-center">
-      <button onClick={cycleLeft}>&larr;</button>
+    <div className="overflow-hidden">
+      <div className="flex items-center justify-around mb-4">
+        <button
+          onClick={cycleLeft}
+          className="text-2xl bg-stone-800 py-2 px-8 rounded-full">
+          &larr;
+        </button>
+        <button
+          onClick={cycleRight}
+          className="text-2xl  bg-stone-800 py-2 px-8 rounded-full">
+          &rarr;
+        </button>
+      </div>
       <div>{children[current]}</div>
-      <button onClick={cycleRight}>&rarr;</button>
     </div>
   );
 };
