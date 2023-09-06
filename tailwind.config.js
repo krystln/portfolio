@@ -14,16 +14,16 @@ module.exports = {
       },
       keyframes: {
         flicker: {
-          '0% 100%': {
+          'from': {
             opacity: 1,
           },
-          '50%': {
+          'to': {
             opacity: 0,
           }
         }
       },
       animation: {
-        flicker: 'flicker 0.75s ease-in infinite',
+        flicker: 'flicker 1s cubic-bezier(1,0,0,1) infinite',
       },
       fontFamily: {
         sans: ['Exo\\ 2', 'sans-serif'],
