@@ -2,7 +2,6 @@
 
 import React, { useContext } from "react";
 import Image from "next/image";
-import BgCurve from "./ui/BgCurve";
 import { ThemeContext, ThemeSwitcherContext } from "@components/Theme";
 
 const Scroll = () => {
@@ -44,9 +43,6 @@ const Scroll = () => {
           onClick={scrollDown}>
           &darr;
         </button>
-      </div>
-      <div className="fixed bottom-0 left-1/3 z-[-1] ">
-        <BgCurve />
       </div>
     </>
   );
