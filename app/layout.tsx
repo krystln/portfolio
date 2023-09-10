@@ -1,5 +1,6 @@
 import "./styles/globals.css";
 import "./styles/components.css";
+import Theme from "./components/Theme";
 
 export const metadata = {
   title: "👋 Welcome! To my website",
@@ -15,7 +16,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <Theme>
+        <body>{children}</body>
+      </Theme>
     </html>
   );
 }
