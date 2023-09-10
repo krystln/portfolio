@@ -8,9 +8,9 @@ import { ThemeContext } from "./Theme";
 
 const Hero = () => {
   return (
-    <div className="flex flex-col gap-10 items-center w-1/3 h-[100vh] justify-center">
+    <div className="flex flex-col gap-5 items-center w-1/3 h-[100vh] justify-center max-[840px]:w-2/3">
       <SubTitle />
-      <p className="font-[500] text-xl text-center">
+      <p className="font-[400] text-xl text-center ">
         👋 Welcome! I&apos;m <span className="font-[600]">Akshit Goyal</span>, a
         full-stack web developer driven by a love for detail and a flair for
         creating captivating web experiences. From just wire frames to beautiful
@@ -59,9 +59,8 @@ function SubTitle() {
   }, []);
 
   return (
-    <h5 className="text-stone-400 text-lg text-center flex font-mono">
-      {word}
-      <div className="text-white animate-flicker">_</div>
+    <h5 className="text-stone-400 text-lg text-center flex font-mono h-[56px]">
+      {word + "|"}
     </h5>
   );
 }
