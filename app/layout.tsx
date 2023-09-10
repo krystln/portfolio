@@ -1,5 +1,4 @@
 import "./styles/globals.css";
-import "./styles/components.css";
 import Theme from "./components/Theme";
 
 export const metadata = {
