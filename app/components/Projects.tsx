@@ -51,7 +51,7 @@ const Projects = () => {
       <h1 className="text-4xl font-mono font-[700]">
         My Projects<span className="animate-flicker">_</span>
       </h1>
-      <div className="m-[4rem] p-[auto] Projects flex items-center gap-1">
+      <div className="m-[4rem] p-[auto] Projects flex items-center gap-1 max-[500px]:mt-6 max-[500px]:m-0">
         <Carosel>{projectList}</Carosel>
       </div>
     </section>

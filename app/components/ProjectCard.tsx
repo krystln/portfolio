@@ -1,8 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import Link from "next/link";
-import { useContext, useEffect } from "react";
+import { useContext } from "react";
 import { ThemeContext } from "@components/Theme";
 
 type PCprop = {
@@ -22,13 +21,13 @@ const ProjectCard = ({ title, description, url, codeUrl }: PCprop) => {
     : "./icons/light/github.svg";
 
   return (
-    <div className="flex flex-col w-[480px] gap-2 items-center">
+    <>
       <Image
         src={`/projectImg/${title}.png`}
         alt=""
         width={1280}
         height={720}
-        className="border border-white z-0"
+        className="border border-white z-0 "
       />
 
       <h2 className="flex justify-between text-2xl w-full px-5 font-bold">
@@ -55,7 +54,7 @@ const ProjectCard = ({ title, description, url, codeUrl }: PCprop) => {
         </div>
       </h2>
       <p className="text-center text-lg font-thin">{description}</p>
-    </div>
+    </>
   );
 };
 
