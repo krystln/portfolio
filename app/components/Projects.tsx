@@ -1,6 +1,6 @@
 import React from "react";
 import ProjectCard from "@/app/components/ProjectCard";
-import Carosel from "@components/Carosel";
+import Carosel from "@/app/components/ui/Carosel";
 
 type Project = {
   title: string;
