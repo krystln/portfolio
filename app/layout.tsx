@@ -5,7 +5,6 @@ export const metadata = {
   title: "👋 Welcome! To my website",
   description:
     "Web Developer, Open Source Enthusiast, and a Student. Looking forward for opportunities to learn and grow.",
-  image: "",
 };
 
 export default function RootLayout({

@@ -6,7 +6,7 @@ import Scroll from "./components/Scroll";
 const Home = () => {
   return (
     <>
-      <main className="flex flex-col items-center">
+      <main className="flex flex-col items-center h-[300vh]">
         <Hero />
         <Projects />
         <ContactMe />
