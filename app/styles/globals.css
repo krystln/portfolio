@@ -6,19 +6,17 @@
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: 10, 10, 10; /*Black*/
-  --background-rgb: 229, 229, 229; /*Ivory*/
+	--foreground-rgb: 10, 10, 10; /*Black*/
+	--background-rgb: 229, 229, 229; /*Ivory*/
 }
 
 @media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 229, 229, 229;
-    --background-rgb: 10, 10, 10;
-  }
+	:root {
+		--foreground-rgb: 229, 229, 229;
+		--background-rgb: 10, 10, 10;
+	}
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: rgb(var(--background-rgb));
-  overflow: hidden;
+	overflow: hidden;
 }
