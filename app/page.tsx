@@ -1,19 +1,15 @@
 import Hero from "@components/Hero";
 import Projects from "@components/Projects";
 import ContactMe from "@/app/components/ContactMe";
-import Scroll from "./components/Scroll";
 
 const Home = () => {
-  return (
-    <>
-      <main className="flex flex-col items-center h-[300vh]">
-        <Hero />
-        <Projects />
-        <ContactMe />
-      </main>
-      <Scroll />
-    </>
-  );
+	return (
+		<main className="flex flex-col items-center h-[300vh]">
+			<Hero />
+			<Projects />
+			<ContactMe />
+		</main>
+	);
 };
 
 export default Home;

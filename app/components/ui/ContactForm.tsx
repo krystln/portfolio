@@ -1,12 +1,9 @@
 "use client";
-import { useContext, useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 import { twMerge } from "tailwind-merge";
-import { ThemeContext } from "../Theme";
 
 const ContactForm = () => {
-	const { isDarkTheme } = useContext(ThemeContext);
-
 	const formRef = useRef<HTMLFormElement>(null);
 	const [status, setStatus] = useState<boolean | null>(null);
 
@@ -55,7 +52,7 @@ const ContactForm = () => {
 	}, []);
 
 	const borderStyle = {
-		borderColor: isDarkTheme ? "#fff" : "#000"
+		borderColor: "#fff"
 	};
 
 	return (

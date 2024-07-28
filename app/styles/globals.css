@@ -6,17 +6,8 @@
 @tailwind utilities;
 
 :root {
-	--foreground-rgb: 10, 10, 10; /*Black*/
-	--background-rgb: 229, 229, 229; /*Ivory*/
-}
-
-@media (prefers-color-scheme: dark) {
-	:root {
-		--foreground-rgb: 229, 229, 229;
-		--background-rgb: 10, 10, 10;
-	}
-}
-
-body {
-	overflow: hidden;
+	background-color: black;
+	color: white;
+	scroll-behavior: smooth;
+	scrollbar-width: thin;
 }

@@ -1,22 +1,18 @@
 import "./styles/globals.css";
-import Theme from "./components/Theme";
 
 export const metadata = {
-  title: "👋 Welcome! To my website",
-  description:
-    "Web Developer, Open Source Enthusiast, and a Student. Looking forward for opportunities to learn and grow.",
+	title: "👋 Welcome! To my website",
+	description: "Fullstack Web Developer. Looking for career opportunities."
 };
 
 export default function RootLayout({
-  children,
+	children
 }: {
-  children: React.ReactNode;
+	children: React.ReactNode;
 }) {
-  return (
-    <html lang="en">
-      <Theme>
-        <body>{children}</body>
-      </Theme>
-    </html>
-  );
+	return (
+		<html lang="en">
+			<body>{children}</body>
+		</html>
+	);
 }

@@ -1,14 +1,14 @@
 "use client";
 
-import Image from "next/image";
-import Link from "next/link";
-import { useContext, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 
-import { ThemeContext } from "./Theme";
+import Links from "./links";
 
 const Hero = () => {
 	return (
-		<div className="flex flex-col gap-5 items-center w-1/3 h-[100vh] justify-center max-[840px]:w-2/3">
+		<div
+			className="flex flex-col gap-5 items-center w-1/3 h-[100vh] justify-center max-[840px]:w-2/3"
+			id="Hero">
 			<SubTitle />
 			<p className="font-[400] text-xl text-center ">
 				👋 Welcome! I&apos;m <span className="font-[600]">Akshit Goyal</span>, a
@@ -16,7 +16,7 @@ const Hero = () => {
 				creating captivating web experiences. From just wire frames to beautiful
 				code, I transform ideas into digital enchantment.
 			</p>
-			<SMLinks />
+			<Links />
 		</div>
 	);
 };
@@ -62,34 +62,6 @@ function SubTitle() {
 		<h5 className="text-stone-400 text-lg text-center flex font-mono h-[56px]">
 			{word + "|"}
 		</h5>
-	);
-}
-
-function SMLinks() {
-	const { isDarkTheme } = useContext(ThemeContext);
-
-	const linkedinIcon = isDarkTheme
-		? "./icons/dark/linkedin.svg"
-		: "./icons/light/linkedin.svg";
-	const twitterIcon = isDarkTheme
-		? "./icons/dark/twitter.svg"
-		: "./icons/light/twitter.svg";
-	const githubIcon = isDarkTheme
-		? "./icons/dark/github.svg"
-		: "./icons/light/github.svg";
-
-	return (
-		<div className="flex gap-5 items-center">
-			<Link href="/">
-				<Image src={linkedinIcon} alt="LinkedIn" width={50} height={50} />
-			</Link>
-			<Link href="/">
-				<Image src={twitterIcon} alt="Twitter" width={75} height={75} />
-			</Link>
-			<Link href="/">
-				<Image src={githubIcon} alt="GitHub" width={50} height={50} />
-			</Link>
-		</div>
 	);
 }
 
