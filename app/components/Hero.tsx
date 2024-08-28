@@ -13,8 +13,7 @@ const Hero = () => {
 			<p className="font-[400] text-xl text-center ">
 				👋 Welcome! I&apos;m <span className="font-[600]">Akshit Goyal</span>, a
 				full-stack web developer driven by a love for detail and a flair for
-				creating captivating web experiences. From just wire frames to beautiful
-				code, I transform ideas into digital enchantment.
+				creating captivating web experiences.
 			</p>
 			<Links />
 		</div>

@@ -4,9 +4,9 @@ import ContactMe from "@/app/components/ContactMe";
 
 const Home = () => {
 	return (
-		<main className="flex flex-col items-center h-[300vh]">
+		<main className="flex flex-col items-center">
 			<Hero />
-			<Projects />
+			{/* <Projects /> */}
 			<ContactMe />
 		</main>
 	);
